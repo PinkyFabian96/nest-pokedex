@@ -5,6 +5,7 @@ import { AppRoutingModule } from './api-v2/app-routing.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { DatabaseModule } from './database/database.module';
 import { CommonModule } from './common/common.module';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { CommonModule } from './common/common.module';
     //MongooseModule.forRoot('mongodb://localhost'),
     DatabaseModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    SeedModule
   ],
 })
 export class AppModule {}
